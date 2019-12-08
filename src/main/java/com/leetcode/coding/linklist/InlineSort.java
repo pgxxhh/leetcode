@@ -1,5 +1,8 @@
 package com.leetcode.coding.linklist;
 
+import java.util.Comparator;
+import java.util.PriorityQueue;
+
 public class InlineSort {
 
     public static class Node {
@@ -39,6 +42,14 @@ public class InlineSort {
             cur = next;
         }
         return dummy.next;
+    }
+
+
+    public int[] inlineSortOfArray(int[] arr) {
+        int[] result = new int[arr.length];
+
+
+        return result;
     }
 
 }
