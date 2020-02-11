@@ -14,4 +14,13 @@ public class BinarySearchTest {
         int result = SearchInsertPosition.searchInsertPosition(arr, value);
         Assertions.assertEquals(result, 1);
     }
+
+    @Test
+    public void testBinarySearch() {
+        int[] nums = new int[] {-1,0,3,5,9,12};
+        int target = 9;
+
+        int result = BinarySearch.binarySearch(nums, 9);
+        Assertions.assertEquals(result, 4);
+    }
 }
