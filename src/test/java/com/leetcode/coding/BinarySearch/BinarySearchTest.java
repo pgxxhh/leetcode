@@ -23,4 +23,13 @@ public class BinarySearchTest {
         int result = BinarySearch.binarySearch(nums, 9);
         Assertions.assertEquals(result, 4);
     }
+
+    @Test
+    public void testTimeMap() {
+        TimeBasedKeyValueStore valueStore = new TimeBasedKeyValueStore();
+        valueStore.set("pgpgpgg", "handsome", 1);
+
+
+        Assertions.assertEquals(valueStore.get("pgpgpgg", 5), "handsome");
+    }
 }
