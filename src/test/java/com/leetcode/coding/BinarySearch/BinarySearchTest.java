@@ -30,6 +30,6 @@ public class BinarySearchTest {
         valueStore.set("pgpgpgg", "handsome", 1);
 
 
-        Assertions.assertEquals(valueStore.get("pgpgpgg", 5), "handsome");
+        Assertions.assertEquals(valueStore.get("pgpgpgg", 1), "handsome");
     }
 }
