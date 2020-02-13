@@ -32,4 +32,10 @@ public class BinarySearchTest {
 
         Assertions.assertEquals(valueStore.get("pgpgpgg", 2), "handsome");
     }
+
+    @Test
+    public void testSearchInRotatedSortedArray() {
+       int index = SearchInRotatedSortedArray.searchInRotatedSortedArray(new int[]{4,5,6,1,2,3}, 5);
+       Assertions.assertEquals(1, index);
+    }
 }
