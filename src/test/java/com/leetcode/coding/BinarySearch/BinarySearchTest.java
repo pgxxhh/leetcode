@@ -38,4 +38,10 @@ public class BinarySearchTest {
        int index = SearchInRotatedSortedArray.searchInRotatedSortedArray(new int[]{4,5,6,1,2,3}, 5);
        Assertions.assertEquals(1, index);
     }
+
+    @Test
+    public void testFindMinimuminRotatedSortedArray() {
+        int minNum = FindMinimuminRotatedSortedArray.findMinimuminRotatedSortedArray(new int[]{3,4,5,1,2});
+        Assertions.assertEquals(minNum, 1);
+    }
 }
