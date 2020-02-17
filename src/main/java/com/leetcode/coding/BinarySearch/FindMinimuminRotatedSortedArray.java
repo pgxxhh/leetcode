@@ -21,10 +21,6 @@ public class FindMinimuminRotatedSortedArray {
             return nums[start];
         }
 
-        if (nums[start] <= nums[end]) {
-            return nums[start];
-        }
-
         int mid = start + (end-start)/2;
         int leftMin = findMinimuminRotatedSortedArray(nums, start, mid-1);
         int rightMin = findMinimuminRotatedSortedArray(nums, mid, end);

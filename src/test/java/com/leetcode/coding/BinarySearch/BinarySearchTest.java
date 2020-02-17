@@ -44,4 +44,10 @@ public class BinarySearchTest {
         int minNum = FindMinimuminRotatedSortedArray.findMinimuminRotatedSortedArray(new int[]{3,4,5,1,2});
         Assertions.assertEquals(minNum, 1);
     }
+
+    @Test
+    public void testFindMinimuminRotatedSortedArrayII() {
+        int minNum = FindMinimumInRotatedSortedArrayII.findMinimuminRotatedSortedArray(new int[]{2,2,2,2,3,1,2});
+        Assertions.assertEquals(minNum, 1);
+    }
 }
