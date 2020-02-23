@@ -50,4 +50,16 @@ public class BinarySearchTest {
         int minNum = FindMinimumInRotatedSortedArrayII.findMinimuminRotatedSortedArray(new int[]{2,2,2,2,3,1,2});
         Assertions.assertEquals(minNum, 1);
     }
+
+    @Test
+    public void testFindPeakElement() {
+        int result = FindPeakElement.findPeakElement(new int[]{1,2,1,3,5,6,4});
+        Assertions.assertEquals(result, 5);
+    }
+
+    @Test
+    public void testPeakIndexInAMountainArray() {
+        int result = PeakIndexInAMountainArray.peakIndexInAMountainArray(new int[]{1,2,1});
+        Assertions.assertEquals(result, 1);
+    }
 }
