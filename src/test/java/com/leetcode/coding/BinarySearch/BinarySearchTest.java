@@ -62,4 +62,10 @@ public class BinarySearchTest {
         int result = PeakIndexInAMountainArray.peakIndexInAMountainArray(new int[]{1,2,1});
         Assertions.assertEquals(result, 1);
     }
+
+    @Test
+    public void testSqrtX() {
+        int result = SqrtX.sqrtX(4);
+        Assertions.assertEquals(result, 2);
+    }
 }
