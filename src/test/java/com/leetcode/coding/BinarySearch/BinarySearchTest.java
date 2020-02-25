@@ -65,7 +65,7 @@ public class BinarySearchTest {
 
     @Test
     public void testSqrtX() {
-        int result = SqrtX.sqrtX(4);
+        int result = SqrtX.sqrtX(5);
         Assertions.assertEquals(result, 2);
     }
 }
