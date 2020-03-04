@@ -68,4 +68,13 @@ public class BinarySearchTest {
         int result = SqrtX.sqrtX(5);
         Assertions.assertEquals(result, 2);
     }
+
+    @Test
+    public void testSearchA2DMatrix() {
+        int[][] array = new int[][]{{1,3,5,7},{10,11,16,20},{23,30,34,50}};
+        boolean result = SearchA2DMatrix.searchA2DMatrix(array, 30);
+
+        Assertions.assertEquals(result, true);
+    }
+
 }
