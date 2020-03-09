@@ -77,4 +77,12 @@ public class BinarySearchTest {
         Assertions.assertEquals(result, true);
     }
 
+    @Test
+    public void testKoKoEatingBananas() {
+        int[] piles = new int[]{3,6,7,11};
+        int result = KoKoEatingBananas.minEatingSpeed(piles, 8);
+        Assertions.assertEquals(result, 4);
+
+    }
+
 }
