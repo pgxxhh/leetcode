@@ -1,8 +1,6 @@
 package com.leetcode.coding.BinarySearch;
 
-import com.sun.tools.javac.util.ArrayUtils;
 import java.util.Arrays;
-import java.util.Collections;
 
 /**
  * https://leetcode.com/problems/koko-eating-bananas/
