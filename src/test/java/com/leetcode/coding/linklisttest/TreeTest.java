@@ -1,7 +1,7 @@
 package com.leetcode.coding.linklisttest;
 
 import com.leetcode.coding.tree.IsBinaryTreeSymmetry;
-import com.leetcode.coding.tree.IsBinaryTreeSymmetry.TreeNode;
+import com.leetcode.coding.tree.TreeNode;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
