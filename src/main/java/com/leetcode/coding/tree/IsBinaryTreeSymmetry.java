@@ -1,5 +1,4 @@
 package com.leetcode.coding.tree;
-import com.leetcode.coding.tree.TreeNode;
 public class IsBinaryTreeSymmetry {
     public static boolean isBinaryTreeSymmetry(TreeNode root) {
         if (root == null) {
