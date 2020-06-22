@@ -31,18 +31,7 @@ public class TreeTest {
 
     @Test
     public void testNaryTreeLevelOrderTraversal() {
-        List<NaryTreeLevelOrderTraversal.Node> children = new ArrayList<>();
-
-
-        NaryTreeLevelOrderTraversal.Node child1 = new NaryTreeLevelOrderTraversal.Node(2);
-        NaryTreeLevelOrderTraversal.Node child2 = new NaryTreeLevelOrderTraversal.Node(3);
-        NaryTreeLevelOrderTraversal.Node child3 = new NaryTreeLevelOrderTraversal.Node(4);
-
-        children.add(child1);
-        children.add(child2);
-        children.add(child3);
-
-        NaryTreeLevelOrderTraversal.Node root = new NaryTreeLevelOrderTraversal.Node(1, children);
+        NTreeNode root = generateNTree();
         List<List<Integer>> actural = NaryTreeLevelOrderTraversal.levelOrder(root);
 
         List<List<Integer>> expect = new ArrayList<>();
@@ -52,6 +41,33 @@ public class TreeTest {
         expect.add((List<Integer>)leve21List);
 
         Assertions.assertEquals(expect, actural);
+    }
+
+    @Test
+    public void testNaryTreePreorderTraversal() {
+        NTreeNode root = generateNTree();
+       // List<Integer> result = NaryTreePreorderTraversal.preorderIterative(root);
+        List<Integer> result = NaryTreePreorderTraversal.preorderRecursive(root);
+
+        List<Integer> expect = new ArrayList<>(Arrays.asList(1,2,3,4));
+
+        Assertions.assertEquals(expect, result);
+    }
+
+    private NTreeNode generateNTree() {
+        List<NTreeNode> children = new ArrayList<>();
+
+
+        NTreeNode child1 = new NTreeNode(2);
+        NTreeNode child2 = new NTreeNode(3);
+        NTreeNode child3 = new NTreeNode(4);
+
+        children.add(child1);
+        children.add(child2);
+        children.add(child3);
+
+        NTreeNode root = new NTreeNode(1, children);
+        return root;
     }
 
      private TreeNode generateCommonTree() {
