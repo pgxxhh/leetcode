@@ -6,7 +6,6 @@ import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
 public class TreeTest {
@@ -51,6 +50,16 @@ public class TreeTest {
 
         List<Integer> expect = new ArrayList<>(Arrays.asList(1,2,3,4));
 
+        Assertions.assertEquals(expect, result);
+    }
+
+    @Test
+    public void testNaryTreePostOrderTraversal() {
+        NTreeNode root = generateNTree();
+      //  List<Integer> result = NaryTreePostorderTraversal.postorder(root);
+        List<Integer> result = NaryTreePostorderTraversal.postOrderRecursive(root);
+
+        List<Integer> expect = new ArrayList<>(Arrays.asList(2,3,4,1));
         Assertions.assertEquals(expect, result);
     }
 
