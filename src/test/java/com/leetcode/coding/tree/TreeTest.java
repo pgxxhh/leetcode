@@ -63,6 +63,14 @@ public class TreeTest {
         Assertions.assertEquals(expect, result);
     }
 
+    @Test
+    public void testIsSameTree() {
+        TreeNode tree1 = generateCommonTree();
+        TreeNode tree2 = generateCommonTree();
+
+       Assertions.assertEquals(true, SameTree.isSameTree(tree1, tree2));
+    }
+
     private NTreeNode generateNTree() {
         List<NTreeNode> children = new ArrayList<>();
 
