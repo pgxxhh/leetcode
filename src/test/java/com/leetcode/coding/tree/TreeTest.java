@@ -71,6 +71,14 @@ public class TreeTest {
        Assertions.assertEquals(true, SameTree.isSameTree(tree1, tree2));
     }
 
+    @Test
+    public void  testMaxDepthOfBinaryTree() {
+        TreeNode tree = generateCommonTree();
+        int result =  MaximumDepthOfBinaryTree.maxDepth(tree);
+
+        Assertions.assertEquals(2, result);
+    }
+
     private NTreeNode generateNTree() {
         List<NTreeNode> children = new ArrayList<>();
 
