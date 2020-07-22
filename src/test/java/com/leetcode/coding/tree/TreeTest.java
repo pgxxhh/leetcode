@@ -79,6 +79,18 @@ public class TreeTest {
         Assertions.assertEquals(2, result);
     }
 
+    @Test
+    public void testBalancedBinaryTree() {
+        TreeNode tree = generateCommonTree();
+        Assertions.assertEquals(true, BalancedBinaryTree.isBalanced(tree));
+
+        TreeNode node = new TreeNode(4);
+        TreeNode node2 = new TreeNode(5);
+        tree.left.left = node;
+        tree.left.left.left = node2;
+        Assertions.assertEquals(false, BalancedBinaryTree.isBalanced(tree));
+    }
+
     private NTreeNode generateNTree() {
         List<NTreeNode> children = new ArrayList<>();
 
