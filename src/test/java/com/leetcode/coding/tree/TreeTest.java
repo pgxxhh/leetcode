@@ -91,6 +91,19 @@ public class TreeTest {
         Assertions.assertEquals(false, BalancedBinaryTree.isBalanced(tree));
     }
 
+    @Test
+    public void testMinimumDepthOfBianryTree() {
+        TreeNode root = generateCommonTree();
+//        int result = MinimumDepthOfBinaryTree.minDepth(root);
+//        Assertions.assertEquals(2, result);
+
+        root.right.right = new TreeNode(5);
+        root.right.right = new TreeNode(6);
+        root.left.left = new TreeNode(4);
+        Assertions.assertEquals(3, MinimumDepthOfBinaryTree.minDepth(root));
+
+    }
+
     private NTreeNode generateNTree() {
         List<NTreeNode> children = new ArrayList<>();
 
