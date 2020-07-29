@@ -101,7 +101,16 @@ public class TreeTest {
         root.right.right = new TreeNode(6);
         root.left.left = new TreeNode(4);
         Assertions.assertEquals(3, MinimumDepthOfBinaryTree.minDepth(root));
+    }
 
+    @Test
+    public void testSubTreeOfAnotherTree() {
+        TreeNode s = generateCommonTree();
+        TreeNode t = generateCommonTree();
+
+        Assertions.assertEquals(SubtreeOfAnotherTree.isSubtree(s, t), true);
+        t.left.value = 999;
+        Assertions.assertEquals(SubtreeOfAnotherTree.isSubtree(s, t), false);
     }
 
     private NTreeNode generateNTree() {
