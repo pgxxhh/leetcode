@@ -113,6 +113,21 @@ public class TreeTest {
         Assertions.assertEquals(SubtreeOfAnotherTree.isSubtree(s, t), false);
     }
 
+    @Test
+    public void testBinaryTreeLevelOrderTraversal() {
+        TreeNode root = generateCommonTree();
+        List<List<Integer>> expected = new ArrayList<>();
+        List<Integer> list0 = new ArrayList<>();
+        list0.add(1);
+        List<Integer> list1 = new ArrayList<>();
+        list1.add(2);
+        list1.add(3);
+        expected.add(list0);
+        expected.add(list1);
+
+        Assertions.assertEquals(expected, BinaryTreeLevelOrderTraversal.levelOrder(root));
+    }
+
     private NTreeNode generateNTree() {
         List<NTreeNode> children = new ArrayList<>();
 
