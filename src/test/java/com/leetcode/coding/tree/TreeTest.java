@@ -143,6 +143,16 @@ public class TreeTest {
         Assertions.assertEquals(expected, BinaryTreeLevelOrderTraversalII.levelOrderBottom(root));
     }
 
+    @Test
+    public void testLeafSimilarTrees() {
+        TreeNode root1 = generateCommonTree();
+        TreeNode root2 = generateCommonTree();
+        Assertions.assertEquals(LeafSimilarTrees.leafSimilar(root1, root2), true);
+
+        root1.left.left = new TreeNode(5);
+        Assertions.assertEquals(LeafSimilarTrees.leafSimilar(root1, root2), false);
+    }
+
     private NTreeNode generateNTree() {
         List<NTreeNode> children = new ArrayList<>();
 
