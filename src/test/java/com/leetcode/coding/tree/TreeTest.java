@@ -153,6 +153,17 @@ public class TreeTest {
         Assertions.assertEquals(LeafSimilarTrees.leafSimilar(root1, root2), false);
     }
 
+    @Test
+    public void testBinaryTreePruning() {
+        TreeNode root = new TreeNode(1);
+        root.left = new TreeNode(0);
+        root.right = new TreeNode(1);
+
+        TreeNode result = new TreeNode(1);
+        result.right = new TreeNode(1);
+        Assertions.assertEquals(result, BinaryTreePruning.pruneTree(root));
+    }
+
     private NTreeNode generateNTree() {
         List<NTreeNode> children = new ArrayList<>();
 
