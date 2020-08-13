@@ -164,6 +164,14 @@ public class TreeTest {
         Assertions.assertEquals(result, BinaryTreePruning.pruneTree(root));
     }
 
+    @Test
+    public void testTrimABinaryTree() {
+        TreeNode root = generateCommonTree();
+        TreeNode result = new TreeNode(1);
+        result.left = new TreeNode(2);
+        Assertions.assertEquals(result, TrimABinaryTree.trimBST(root, 1,2));
+    }
+
     private NTreeNode generateNTree() {
         List<NTreeNode> children = new ArrayList<>();
 

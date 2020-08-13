@@ -8,7 +8,8 @@ package com.leetcode.coding.tree;
  * (Recall that the subtree of a node X is X, plus every node that is a descendant of X.)
  */
 public class BinaryTreePruning {
-
+	private static final String HAHA = "haha";
+	public String test = HAHA;
 
 	public static TreeNode pruneTree(TreeNode root) {
 		if (root == null) {

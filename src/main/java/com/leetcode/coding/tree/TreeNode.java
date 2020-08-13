@@ -1,5 +1,8 @@
 package com.leetcode.coding.tree;
 
+import lombok.Data;
+
+@Data
 public class TreeNode {
 
     public int value;
