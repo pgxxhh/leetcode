@@ -1,6 +1,7 @@
 package com.leetcode.coding.tree;
 
 import org.assertj.core.util.Lists;
+import org.junit.Assert;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -170,6 +171,22 @@ public class TreeTest {
         TreeNode result = new TreeNode(1);
         result.left = new TreeNode(2);
         Assertions.assertEquals(result, TrimABinaryTree.trimBST(root, 1,2));
+    }
+
+    @Test
+    public void testDeleteLeavesWithAGivenValue() {
+        TreeNode root = new TreeNode(1);
+        TreeNode node0 = new TreeNode(2);
+        TreeNode node1 = new TreeNode(2);
+        TreeNode node2 = new TreeNode(2);
+
+        TreeNode result = new TreeNode(1);
+
+        root.left = node0;
+        root.left.left = node2;
+        root.right = node1;
+
+        Assert.assertEquals(DeleteLeavesWithAGivenValue.removeLeafNodes(root, 2), result);
     }
 
     private NTreeNode generateNTree() {
