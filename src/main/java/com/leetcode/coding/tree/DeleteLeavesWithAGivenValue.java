@@ -24,5 +24,4 @@ public class DeleteLeavesWithAGivenValue {
 
 		return root.left != null || root.right != null || root.value != target ? root : null;
 	}
-
 }

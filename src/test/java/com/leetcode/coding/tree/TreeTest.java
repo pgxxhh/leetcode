@@ -189,6 +189,12 @@ public class TreeTest {
         Assert.assertEquals(DeleteLeavesWithAGivenValue.removeLeafNodes(root, 2), result);
     }
 
+    @Test
+    public void testPathSum() {
+        TreeNode root = generateCommonTree();
+        Assertions.assertEquals(true, PathSum.hasPathSum(root, 3));
+    }
+
     private NTreeNode generateNTree() {
         List<NTreeNode> children = new ArrayList<>();
 
