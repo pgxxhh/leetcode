@@ -195,6 +195,18 @@ public class TreeTest {
         Assertions.assertEquals(true, PathSum.hasPathSum(root, 3));
     }
 
+    @Test
+    public void testPathSumII() {
+        TreeNode root = generateCommonTree();
+        List<List<Integer>> results = new ArrayList<>();
+        List<Integer> resultsInner = new ArrayList<Integer>() {{
+            add(1);
+            add(2);
+        }};
+        results.add(resultsInner);
+        Assertions.assertEquals(results, PathSumII.pathSum(root, 3));
+    }
+
     private NTreeNode generateNTree() {
         List<NTreeNode> children = new ArrayList<>();
 
