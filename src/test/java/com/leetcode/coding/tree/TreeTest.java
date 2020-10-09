@@ -207,6 +207,13 @@ public class TreeTest {
         Assertions.assertEquals(results, PathSumII.pathSum(root, 3));
     }
 
+    @Test
+    public void testSumRootToLeafNumbers() {
+        TreeNode root = generateCommonTree();
+        int result = SumRootToLeafNumbers.sumNumbers(root);
+        Assertions.assertEquals(result, 25);
+    }
+
     private NTreeNode generateNTree() {
         List<NTreeNode> children = new ArrayList<>();
 
