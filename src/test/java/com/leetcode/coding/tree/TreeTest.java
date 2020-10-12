@@ -214,6 +214,17 @@ public class TreeTest {
         Assertions.assertEquals(result, 25);
     }
 
+    @Test
+    public void testBinaryTreePaths() {
+        TreeNode root = generateCommonTree();
+        List<String> results = BinaryTreePaths.binaryTreePaths(root);
+        List<String> expects = new ArrayList<>();
+        expects.add("1->2");
+        expects.add("1->3");
+
+        Assertions.assertEquals(results, expects);
+    }
+
     private NTreeNode generateNTree() {
         List<NTreeNode> children = new ArrayList<>();
 
