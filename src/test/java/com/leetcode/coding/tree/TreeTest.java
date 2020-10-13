@@ -225,6 +225,16 @@ public class TreeTest {
         Assertions.assertEquals(results, expects);
     }
 
+    @Test
+    public void testLowestCommonAncestorOfABinaryTree() {
+        TreeNode root = generateCommonTree();
+
+        TreeNode result =  LowestCommonAncestorOfABinaryTree.lowestCommonAncestor(root, new TreeNode(2), new TreeNode(3));
+        TreeNode expected = new TreeNode(1);
+
+        Assert.assertEquals(result.value, expected.value);
+    }
+
     private NTreeNode generateNTree() {
         List<NTreeNode> children = new ArrayList<>();
 
