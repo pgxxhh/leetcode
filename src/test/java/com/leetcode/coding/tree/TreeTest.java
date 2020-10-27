@@ -246,7 +246,16 @@ public class TreeTest {
                 , new TreeNode(3));
 
         Assert.assertEquals(result.value, root.value);
+    }
 
+    @Test
+    public void serializeAndDeserializeBinaryTree() {
+        TreeNode root = generateCommonTree();
+        String treeStr = SerializeAndDeserializeBinaryTree.serialize(root);
+        System.out.println(treeStr);
+
+        TreeNode treeNode = SerializeAndDeserializeBinaryTree.deserialize(treeStr);
+        Assert.assertEquals(root, treeNode);
     }
 
     private NTreeNode generateNTree() {
